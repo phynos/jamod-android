@@ -1,0 +1,71 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml:1:1-15:12
+	package
+		ADDED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml:3:5-45
+		INJECTED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml:1:11-69
+	android:versionCode
+		INJECTED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml
+application
+ADDED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml:5:5-13:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\east\.android\build-cache\8e4bc8a861a39fdee379990e0c4424a782674d66\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\east\.android\build-cache\926d7b47f43e218120fc0d66820fe043ab36bb1f\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\east\.android\build-cache\f59a8fbb8d17f0b01e1ff529c4af405e67c88da3\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\east\.android\build-cache\687954ca0b6686a481e29c4b98da0d4bfa406223\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\east\.android\build-cache\5f0744199bf0188dfca2a7679d73d6e9cc58cf56\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\east\.android\build-cache\052cfd81c7c6f50b423bd6871690a6be3a6c2778\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\east\.android\build-cache\deff6086aafcfc44eff32db58a33af859da89fc2\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\east\.android\build-cache\fd43e1e13d886bdb3edf102ce5156872e6709f58\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\east\.android\build-cache\b8aeae015fcf8ef801ee31be2684191a7504757d\output\AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml:10:9-35
+	android:roundIcon
+		ADDED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml:9:9-54
+	android:allowBackup
+		ADDED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml:11:9-40
+uses-sdk
+INJECTED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\east\.android\build-cache\8e4bc8a861a39fdee379990e0c4424a782674d66\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\east\.android\build-cache\926d7b47f43e218120fc0d66820fe043ab36bb1f\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\east\.android\build-cache\f59a8fbb8d17f0b01e1ff529c4af405e67c88da3\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\east\.android\build-cache\687954ca0b6686a481e29c4b98da0d4bfa406223\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\east\.android\build-cache\5f0744199bf0188dfca2a7679d73d6e9cc58cf56\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\east\.android\build-cache\052cfd81c7c6f50b423bd6871690a6be3a6c2778\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\east\.android\build-cache\deff6086aafcfc44eff32db58a33af859da89fc2\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\east\.android\build-cache\fd43e1e13d886bdb3edf102ce5156872e6709f58\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\east\.android\build-cache\b8aeae015fcf8ef801ee31be2684191a7504757d\output\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\east\.android\build-cache\8e4bc8a861a39fdee379990e0c4424a782674d66\output\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\CodeWorkSpace\temp\jamod-android\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\east\.android\build-cache\8e4bc8a861a39fdee379990e0c4424a782674d66\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\east\.android\build-cache\926d7b47f43e218120fc0d66820fe043ab36bb1f\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\east\.android\build-cache\f59a8fbb8d17f0b01e1ff529c4af405e67c88da3\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\east\.android\build-cache\687954ca0b6686a481e29c4b98da0d4bfa406223\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\east\.android\build-cache\5f0744199bf0188dfca2a7679d73d6e9cc58cf56\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\east\.android\build-cache\052cfd81c7c6f50b423bd6871690a6be3a6c2778\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\east\.android\build-cache\deff6086aafcfc44eff32db58a33af859da89fc2\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\east\.android\build-cache\fd43e1e13d886bdb3edf102ce5156872e6709f58\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\east\.android\build-cache\b8aeae015fcf8ef801ee31be2684191a7504757d\output\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\east\.android\build-cache\8e4bc8a861a39fdee379990e0c4424a782674d66\output\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\east\.android\build-cache\8e4bc8a861a39fdee379990e0c4424a782674d66\output\AndroidManifest.xml:26:9-47

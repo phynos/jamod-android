@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\CodeWorkSpace\\temp\\jamod-android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
+        "source": "D:\\CodeWorkSpace\\temp\\jamod-android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\CodeWorkSpace\\temp\\jamod-android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher_round.png",
+        "source": "D:\\CodeWorkSpace\\temp\\jamod-android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    }
+]
