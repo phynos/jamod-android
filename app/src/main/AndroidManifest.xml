@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 
-    package="com.example.east.jamod_android">
+    package="com.phynos.modbus">
 
     <!--允许程序打开网络套接字-->
     <uses-permission android:name="android.permission.INTERNET"/>
