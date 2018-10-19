@@ -45,15 +45,6 @@ public class ModbusRTUTCPTransport implements ModbusTransport
 	// the socket used by this transport
 	private Socket mSocket;
 
-	/**
-	 * 一种hack
-	 *  0: 表示不做其他处理
-	 *  1: 表示新wifi模块，需要处理一些发送帧头和回复帧头
-	 */
-	private int mWifiHack = 0;
-
-	private byte mTailIP;
-
 	private byte[] mSendBuffer = new byte[100];
 
 	/**
@@ -61,13 +52,11 @@ public class ModbusRTUTCPTransport implements ModbusTransport
 	 * @throws IOException
 	 * 
 	 */
-	public ModbusRTUTCPTransport(Socket socket,int wifiHack,byte tailIP) throws IOException
+	public ModbusRTUTCPTransport(Socket socket) throws IOException
 	{
 		// prepare the input and output streams...
 		if (socket != null)
 			this.setSocket(socket);
-		mWifiHack = wifiHack;
-		mTailIP = tailIP;
 	}
 
 	/**
@@ -142,19 +131,7 @@ public class ModbusRTUTCPTransport implements ModbusTransport
 				byte rawBuffer[] = this.outputBuffer.getBuffer();
 				System.out.println("modubs实际数据: " + ModbusUtil.toHex(rawBuffer, 0, bufferLength));
 
-				//在这里决定是否 发送新模块的帧头
-				if(mWifiHack == 100) {
-					byte[] head = createNewWifiHead(bufferLength);
-					System.out.println("新WIFI模块包头: " + ModbusUtil.toHex(head, 0, head.length));
-					//
-					System.arraycopy(head,0,mSendBuffer,0,head.length);
-					System.arraycopy(rawBuffer,0,mSendBuffer,head.length,bufferLength);
-					System.out.println("实际发送数据: " + ModbusUtil.toHex(mSendBuffer, 0, head.length + bufferLength));
-					//
-					mOutputStream.write(mSendBuffer, 0, head.length + bufferLength);
-				} else {
-					mOutputStream.write(rawBuffer, 0, bufferLength);
-				}
+				mOutputStream.write(rawBuffer, 0, bufferLength);
 				mOutputStream.flush();
 
 				// sleep for the time needed to receive the request at the other
@@ -170,27 +147,6 @@ public class ModbusRTUTCPTransport implements ModbusTransport
 		}
 
 	}// writeMessage
-
-	/**
-	 * wifi的ascii码
-	 */
-	private static final byte[] HEAD = {0x77,0x69,0x66,0x69};
-	private static final byte[] CF = new byte[]{0x01,0x00};
-	private byte[] createNewWifiHead(int dataSize){
-		byte[] head = new byte[9];
-		//wifi
-		System.arraycopy(HEAD,0,head,0,HEAD.length);
-		//ip
-		head[4] = mTailIP;
-		//固定的 01 00
-		System.arraycopy(CF,0,head,5,CF.length);
-		//数据长度
-		byte[] length = new byte[2];
-		length[0] = (byte)((dataSize >>> 8) & 0xff);
-		length[1] = (byte)(dataSize & 0xff);
-		System.arraycopy(length,0,head,7,length.length);
-		return head;
-	}
 
 	// This is required for the slave that is not supported
 	@Override
@@ -213,14 +169,6 @@ public class ModbusRTUTCPTransport implements ModbusTransport
 				inputBuffer.reset(new byte[Modbus.MAX_MESSAGE_LENGTH]);
 
 				byte[] buffer = inputBuffer.getBuffer();
-
-				//先读取
-				if(mWifiHack == 100){
-					byte[] head = new byte[9];
-					if(mInputStream.read(head,0,head.length) == -1) {
-						throw new ModbusIOException("新wifi模块的帧头读取失败.");
-					}
-				}
 
 				//读取前2个字节
 				if(mInputStream.read(buffer, 0, 2) == -1){

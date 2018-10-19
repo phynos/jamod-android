@@ -38,7 +38,7 @@ public class RTUBluetoothMasterConnection implements MasterConnection {
     //定义一些 消息 用于通信
     public static final int MSG_INIT = 0;
 
-    public RTUBluetoothMasterConnection(Context context, BluetoothDevice device, boolean wifiHACK){
+    public RTUBluetoothMasterConnection(Context context, BluetoothDevice device){
         mContext = context;
         mDevice = device;
         mHandler = new Handler(mContext.getMainLooper(),new Handler.Callback(){

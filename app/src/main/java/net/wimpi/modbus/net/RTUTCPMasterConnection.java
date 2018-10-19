@@ -38,13 +38,6 @@ public class RTUTCPMasterConnection implements MasterConnection
 	private ModbusRTUTCPTransport modbusRTUTCPTransport;
 
 	/**
-	 * 一种hack
-	 *  0: 表示不做其他处理
-	 *  1: 表示新wifi模块，需要处理一些发送帧头和回复帧头
-	 */
-	private int mWifiHack = 0;
-
-	/**
 	 * Constructs an {@link RTUTCPMasterConnection} instance with a given
 	 * destination address and port. It permits to handle Modbus RTU over TCP
 	 * connections in a way similar to standard Modbus/TCP connections
@@ -56,15 +49,8 @@ public class RTUTCPMasterConnection implements MasterConnection
 	 */
 	public RTUTCPMasterConnection(InetAddress adr, int port)
 	{
-		this(adr,port,0);
-	}
-
-	public RTUTCPMasterConnection(InetAddress adr, int port, int wifiHACK)
-	{
 		this.slaveIPAddress = adr;
 		this.slaveIPPort = port;
-
-		mWifiHack = wifiHACK;
 	}
 	
 	/**
@@ -152,8 +138,7 @@ public class RTUTCPMasterConnection implements MasterConnection
 		//if the modbus transport is not available, create it
 		if (this.modbusRTUTCPTransport == null)
 		{
-			byte tailIP = slaveIPAddress.getAddress()[3];
-			this.modbusRTUTCPTransport = new ModbusRTUTCPTransport(socket,mWifiHack,tailIP);
+			this.modbusRTUTCPTransport = new ModbusRTUTCPTransport(socket);
 		}
 		else
 		{
