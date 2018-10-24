@@ -118,6 +118,19 @@ public class ModbusRTUBluetoothTransport implements ModbusTransport {
 
                 byte[] buffer = inputBuffer.getBuffer();
 
+                //蓝牙需要增加 手动判断读取超时（这里直接取4秒）
+                int timeout = 0;
+                while(mInputStream.available() == 0 && timeout < (4000/250)) {
+                    timeout++;
+                    try {
+                        Thread.sleep(250);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if(mInputStream.available() <= 0)
+                    throw new ModbusIOException("蓝牙读取数据失败！");
+
                 //读取前2个字节
                 if(mInputStream.read(buffer, 0, 2) == -1){
                     throw new ModbusIOException("Premature end of stream (Header truncated).");
